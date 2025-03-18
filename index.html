@@ -1,0 +1,470 @@
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <title>Lycée Château Blanc - Portail</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="portal-container">
+    <header class="portal-header">
+      <h1>Lycée Château Blanc</h1>
+      <p>Votre portail numérique</p>
+    </header>
+
+    <div class="portal-grid">
+      <div class="portal-card card-lycee" onclick="window.location.href='https://umi4555.github.io/site/'">
+        <div class="card-content">
+          <div class="card-icon">🏫</div>
+          <h2 class="card-title">Site du Lycée</h2>
+          <p class="card-description">Actualités et informations officielles</p>
+          <a href="https://umi4555.github.io/site/"class="card-button">Visiter le site</a>
+        </div>
+      </div>
+
+      <div class="portal-card card-cantine" onclick="window.location.href='https://umi4555.github.io/cantine-/'">
+        <div class="card-content">
+          <div class="card-icon">🍽️</div>
+          <h2 class="card-title">Menu de la Cantine</h2>
+          <p class="card-description">Découvrez les menus de la semaine et donnez votre avis</p>
+          <a href="https://umi4555.github.io/Cantine_/" class="card-button">Accéder aux menus</a>
+        </div>
+      </div>
+
+      <div class="portal-card card-video" onclick="window.location.href='video-bac-pro.html'">
+        <div class="card-content">
+          <div class="card-icon">📹</div>
+          <h2 class="card-title">Vidéo Bac Pro CIEL</h2>
+          <p class="card-description">Découvrez notre formation professionnelle en vidéo</p>
+          <a href="video-bac-pro.html" class="card-button">Regarder</a>
+        </div>
+      </div>
+
+      <div class="portal-card card-bien-etre" onclick="window.location.href='bien-etre.html'">
+        <div class="card-content">
+          <div class="card-icon">🧘‍♀️</div>
+          <h2 class="card-title">Espace Bien-être</h2>
+          <p class="card-description">Ressources pour votre santé mentale et physique</p>
+          <a href="bien-etre.html" class="card-button">Découvrir</a>
+        </div>
+      </div>
+
+      <div class="portal-card card-quiz" onclick="window.location.href='https://umi4555.github.io/Quiz/'">
+        <div class="card-content">
+          <div class="card-icon">🧩</div>
+          <h2 class="card-title">Quizz</h2>
+          <p class="card-description">Testez vos connaissances de manière ludique</p>
+          <a href="https://umi4555.github.io/Quiz/" class="card-button">Commencer</a>
+        </div>
+      </div>
+
+       <div class="portal-card card-coupon" onclick="window.location.href='https://umi4555.github.io/Jeux/'">
+        <div class="card-content">
+          <div class="card-icon">🎮</div>
+          <h2 class="card-title">Jeux</h2>
+          <p class="card-description">Découvrez nos jeux interactifs</p>
+          <a href="https://umi4555.github.io/Jeux/" class="card-button">Jouer</a>
+        </div>
+      </div>
+
+          <div class="portal-card card-learning" onclick="document.getElementById('learning-resources').style.display='flex'">
+        <div class="card-content">
+          <div class="card-icon">📚</div>
+          <h2 class="card-title">Ressources d'Apprentissage</h2>
+          <p class="card-description">Formations en ligne et certifications</p>
+          <a href="#learning-resources" class="card-button">Explorer</a>
+        </div>
+      </div>
+
+      <div class="portal-card card-jeux" onclick="window.location.href='coupon-reponse.html'">
+        <div class="card-content">
+          <div class="card-icon">📄</div>
+          <h2 class="card-title">Coupon-Réponse</h2>
+          <p class="card-description">Téléchargez les coupons-réponse en PDF pour vos demandes de stage.</p>
+          <a href="coupon-reponse.html" class="card-button">Consulter</a>
+        </div>
+      </div>
+
+      
+  
+
+      <div class="portal-card card-documents" onclick="openDocsityModal()">
+        <div class="card-content">
+          <div class="card-icon">📄</div>
+          <h2 class="card-title">Documents & Ressources</h2>
+          <p class="card-description">Accédez à une bibliothèque de documents académiques</p>
+          <a href="#" class="card-button">Explorer</a>
+        </div>
+      </div>
+
+  
+    </div>
+  </div>
+
+  <!-- Learning Resources Modal -->
+  <div id="learning-resources" style="
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    padding: 2rem;
+    overflow-y: auto;
+  ">
+    <div style="
+      background: var(--primary-dark);
+      border-radius: 20px;
+      max-width: 800px;
+      width: 100%;
+      padding: 2rem;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+      text-align: center;
+    ">
+      <h2 style="
+        color: var(--dark-text);
+        margin-bottom: 2rem;
+        font-size: 2rem;
+      ">Ressources d'Apprentissage</h2>
+      
+      <div style="
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        @media (max-width: 600px) {
+          grid-template-columns: 1fr;
+        }
+      ">
+        <a href="https://www.mindluster.com/certificate/40/Python-programming-language-video" 
+           target="_blank" 
+           style="
+             background: var(--accent-secondary);
+             color: var(--dark-text);
+             padding: 1rem;
+             border-radius: 10px;
+             text-decoration: none;
+             display: block;
+             transition: transform 0.3s ease;
+           " 
+           onmouseover="this.style.transform='translateY(-5px)'" 
+           onmouseout="this.style.transform='translateY(0)'">
+          Certification Python
+        </a>
+        
+        <a href="https://www.mindluster.com/certificate/8784/Web-Design-video" 
+           target="_blank" 
+           style="
+             background: var(--accent-secondary);
+             color: var(--dark-text);
+             padding: 1rem;
+             border-radius: 10px;
+             text-decoration: none;
+             display: block;
+             transition: transform 0.3s ease;
+           " 
+           onmouseover="this.style.transform='translateY(-5px)'" 
+           onmouseout="this.style.transform='translateY(0)'">
+          Certification Web Design
+        </a>
+        
+        <a href="https://www.mindluster.com/certified/cat/1/Programming" 
+           target="_blank" 
+           style="
+             background: var(--accent-secondary);
+             color: var(--dark-text);
+             padding: 1rem;
+             border-radius: 10px;
+             text-decoration: none;
+             display: block;
+             transition: transform 0.3s ease;
+           " 
+           onmouseover="this.style.transform='translateY(-5px)'" 
+           onmouseout="this.style.transform='translateY(0)'">
+          Formations Programmation
+        </a>
+        
+        <a href="https://www.mindluster.com/certified/cat/26/Web-Design" 
+           target="_blank" 
+           style="
+             background: var(--accent-secondary);
+             color: var(--dark-text);
+             padding: 1rem;
+             border-radius: 10px;
+             text-decoration: none;
+             display: block;
+             transition: transform 0.3s ease;
+           " 
+           onmouseover="this.style.transform='translateY(-5px)'" 
+           onmouseout="this.style.transform='translateY(0)'">
+          Formations Web Design
+        </a>
+      </div>
+
+      <button onclick="document.getElementById('learning-resources').style.display='none'" 
+              style="
+                background: var(--accent-highlight);
+                color: var(--primary-dark);
+                border: none;
+                padding: 0.75rem 1.5rem;
+                border-radius: 25px;
+                margin-top: 1.5rem;
+                cursor: pointer;
+                transition: transform 0.3s ease;
+              "
+              onmouseover="this.style.transform='scale(1.05)'" 
+              onmouseout="this.style.transform='scale(1)'">
+        Fermer
+      </button>
+    </div>
+  </div>
+
+  <!-- Docsity Modal -->
+  <div id="docsity-modal" style="
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    padding: 2rem;
+    overflow-y: auto;
+  ">
+    <div style="
+      background: var(--primary-dark);
+      border-radius: 20px;
+      max-width: 800px;
+      width: 100%;
+      padding: 2rem;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+      text-align: center;
+      color: var(--dark-text);
+    ">
+      <h2 style="
+        color: var(--accent-highlight);
+        margin-bottom: 1.5rem;
+        font-size: 2rem;
+      ">Documents & Ressources Académiques</h2>
+      
+      <p style="
+        margin-bottom: 1.5rem;
+        line-height: 1.6;
+        text-align: left;
+      ">
+        Docsity est une plateforme collaborative qui permet aux étudiants de partager, découvrir et télécharger des ressources académiques. 
+        Sur cette plateforme, vous trouverez :
+      </p>
+
+      <ul style="
+        text-align: left;
+        padding-left: 2rem;
+        margin-bottom: 1.5rem;
+        color: rgba(255,255,255,0.7);
+      ">
+        <li>Des documents de cours</li>
+        <li>Des résumés et fiches de révision</li>
+        <li>Des annales d'examens</li>
+        <li>Des supports de présentation</li>
+      </ul>
+
+      <div style="
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+      ">
+        <a href="https://www.docsity.com/fr/search/documents/?query=lyc%C3%A9e%20chateau%20blanc&free=1" 
+           target="_blank" 
+           style="
+             background: var(--accent-secondary);
+             color: var(--dark-text);
+             padding: 1rem;
+             border-radius: 10px;
+             text-decoration: none;
+             display: inline-block;
+             transition: transform 0.3s ease;
+           " 
+           onmouseover="this.style.transform='translateY(-5px)'" 
+           onmouseout="this.style.transform='translateY(0)'">
+          Rechercher sur Docsity
+        </a>
+      </div>
+
+      <button onclick="closeDocsityModal()" 
+              style="
+                background: var(--accent-highlight);
+                color: var(--primary-dark);
+                border: none;
+                padding: 0.75rem 1.5rem;
+                border-radius: 25px;
+                cursor: pointer;
+                transition: transform 0.3s ease;
+              "
+              onmouseover="this.style.transform='scale(1.05)'" 
+              onmouseout="this.style.transform='scale(1)'">
+        Fermer
+      </button>
+    </div>
+  </div>
+
+  <!-- Chatbot Section -->
+  <div class="chatbot-container">
+    <div class="chatbot-icon" onclick="toggleChatbot()">💬</div>
+    <div class="chatbot-window" id="chatbotWindow">
+      <div class="chatbot-header">
+        <span>Chatbot</span>
+        <span onclick="toggleChatbot()" style="cursor: pointer;">❌</span>
+      </div>
+      <div class="chatbot-messages" id="chatbotMessages"></div>
+      <div class="chatbot-categories" id="chatbotCategories"></div>
+    </div>
+  </div>
+
+  <script>
+    const chatbotQuestions = [
+      { category: 'Informations Générales', questions: [
+        'Qu\'est-ce que le Bac Pro CIEL ?',
+        'Quelles sont les matières étudiées ?',
+        'Quels métiers après le Bac Pro CIEL ?'
+      ]},
+      { category: 'Études et Perspectives', questions: [
+        'Peut-on poursuivre des études ?',
+        'Y a-t-il des stages en entreprise ?',
+        'Quel profil pour réussir ?'
+      ]},
+      { category: 'Site et Fonctionnalités', questions: [
+        'Qui a créé ce site ?',
+        'Pourquoi ce site ?',
+        'Quelles fonctionnalités disponibles ?'
+      ]},
+      { category: 'Vie Professionnelle', questions: [
+        'Comment bien réussir en Bac Pro ?',
+        'Quels débouchés après un Bac Pro ?',
+        'Pourquoi la cybersécurité est importante ?'
+      ]}
+    ];
+
+    const chatbotResponses = {
+      'Qu\'est-ce que le Bac Pro CIEL ?': 'Le Bac Pro CIEL (Cybersécurité, Informatique et Réseaux, Électronique) est une formation qui prépare aux métiers de l\'informatique, des réseaux et de la cybersécurité.',
+      'Quelles sont les matières étudiées ?': 'En plus des matières générales, les matières professionnelles incluent la programmation, les réseaux, la cybersécurité, l\'électronique et la maintenance informatique.',
+      'Quels métiers après le Bac Pro CIEL ?': 'Technicien informatique, administrateur réseau, technicien en cybersécurité, installateur de systèmes électroniques, etc.',
+      'Peut-on poursuivre des études ?': 'Oui ! Il est possible de faire un BTS, un DUT, ou même une école d\'ingénieur après une prépa adaptée.',
+      'Y a-t-il des stages en entreprise ?': 'Oui, plusieurs périodes de stages sont prévues pour acquérir de l\'expérience professionnelle.',
+      'Quel profil pour réussir ?': 'Il faut être curieux, logique, aimer les nouvelles technologies et savoir résoudre des problèmes.',
+      'Qui a créé ce site ?': 'Ce site a été conçu par Umit et Abdoul Aziz.',
+      'Pourquoi ce site ?': 'Pour aider les élèves du Bac Pro CIEL en leur fournissant des informations, des ressources et des outils interactifs.',
+      'Quelles fonctionnalités disponibles ?': 'Un quiz par filière, un menu de la cantine, une vidéo de présentation du Bac Pro CIEL, un chatbot et un lien vers le site officiel du lycée.',
+      'Comment bien réussir en Bac Pro ?': 'Être organisé, bien suivre les cours, faire des recherches personnelles et pratiquer sur des projets concrets.',
+      'Quels débouchés après un Bac Pro ?': 'Soit entrer directement sur le marché du travail, soit poursuivre ses études pour se spécialiser.',
+      'Pourquoi la cybersécurité est importante ?': 'Car les menaces informatiques sont de plus en plus nombreuses et les entreprises recherchent des experts en sécurité.'
+    };
+
+    function toggleChatbot() {
+      const chatbotWindow = document.getElementById('chatbotWindow');
+      const isOpen = chatbotWindow.style.display === 'flex';
+      
+      chatbotWindow.style.display = isOpen ? 'none' : 'flex';
+      document.body.classList.toggle('chatbot-open', !isOpen);
+      
+      if (!isOpen) {
+        displayCategories();
+      }
+    }
+
+    function displayCategories() {
+      const chatbotCategories = document.getElementById('chatbotCategories');
+      const chatbotMessages = document.getElementById('chatbotMessages');
+      
+      chatbotCategories.innerHTML = '';
+      chatbotMessages.innerHTML = `
+        <div class="bot-message">
+          Bonjour ! Je suis votre assistant. Choisissez une catégorie de questions.
+        </div>
+      `;
+
+      chatbotQuestions.forEach(category => {
+        const categoryDiv = document.createElement('div');
+        categoryDiv.className = 'category-btn';
+        categoryDiv.textContent = category.category;
+        categoryDiv.onclick = () => {
+          // Remove active class from all buttons
+          document.querySelectorAll('.category-btn').forEach(btn => btn.classList.remove('active'));
+          categoryDiv.classList.add('active');
+          displayQuestions(category);
+        };
+        chatbotCategories.appendChild(categoryDiv);
+      });
+    }
+
+    function displayQuestions(category) {
+      const chatbotCategories = document.getElementById('chatbotCategories');
+      const chatbotMessages = document.getElementById('chatbotMessages');
+      
+      chatbotCategories.innerHTML = '';
+      chatbotMessages.innerHTML += `
+        <div class="bot-message question-highlight">
+          Catégorie : ${category.category}. Choisissez une question.
+        </div>
+      `;
+
+      category.questions.forEach(question => {
+        const questionDiv = document.createElement('div');
+        questionDiv.className = 'question-btn';
+        questionDiv.textContent = question;
+        questionDiv.onclick = () => {
+          // Remove active class from all buttons
+          document.querySelectorAll('.question-btn').forEach(btn => btn.classList.remove('active'));
+          questionDiv.classList.add('active');
+          showAnswer(question);
+        };
+        chatbotCategories.appendChild(questionDiv);
+      });
+
+      const returnDiv = document.createElement('div');
+      returnDiv.className = 'return-btn';
+      returnDiv.textContent = 'Retour aux catégories';
+      returnDiv.onclick = displayCategories;
+      chatbotCategories.appendChild(returnDiv);
+    }
+
+    function showAnswer(question) {
+      const chatbotMessages = document.getElementById('chatbotMessages');
+      const chatbotCategories = document.getElementById('chatbotCategories');
+      
+      const messageContainer = document.createElement('div');
+      messageContainer.innerHTML = `
+        <div class="bot-message question-highlight">
+          Question : ${question}
+        </div>
+        <div class="bot-message answer-display">
+          Réponse : ${chatbotResponses[question]}
+        </div>
+      `;
+      
+      chatbotMessages.appendChild(messageContainer);
+      
+      chatbotCategories.innerHTML = `
+        <button onclick="displayCategories()" class="return-btn">Retour aux catégories</button>
+      `;
+      
+      chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+    }
+
+    function openDocsityModal() {
+      document.getElementById('docsity-modal').style.display = 'flex';
+    }
+
+    function closeDocsityModal() {
+      document.getElementById('docsity-modal').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
