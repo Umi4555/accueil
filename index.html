@@ -3,8 +3,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
   <title>Lycée Château Blanc - Portail</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="portal-container">
@@ -14,21 +14,21 @@
     </header>
 
     <div class="portal-grid">
-      <div class="portal-card card-lycee" onclick="window.location.href='https://umi4555.github.io/site/'">
+      <div class="portal-card card-lycee" onclick="window.location.href='https://umi4555.github.io/site/">
         <div class="card-content">
           <div class="card-icon">🏫</div>
           <h2 class="card-title">Site du Lycée</h2>
           <p class="card-description">Actualités et informations officielles</p>
-          <a href="https://umi4555.github.io/site/" class="card-button">Visiter le site</a>
+          <a href="https://umi4555.github.io/site/"class="card-button">Visiter le site</a>
         </div>
       </div>
 
-      <div class="portal-card card-cantine" onclick="window.location.href='https://menucantinefinal.netlify.app/'">
+      <div class="portal-card card-cantine" onclick="window.location.href='https://umi4555.github.io/cantine-/'">
         <div class="card-content">
           <div class="card-icon">🍽️</div>
           <h2 class="card-title">Menu de la Cantine</h2>
           <p class="card-description">Découvrez les menus de la semaine et donnez votre avis</p>
-          <a href="https://menucantinefinal.netlify.app/" class="card-button">Accéder aux menus</a>
+          <a href="https://umi4555.github.io/Cantine_/" class="card-button">Accéder aux menus</a>
         </div>
       </div>
 
@@ -50,23 +50,44 @@
         </div>
       </div>
 
-      <div class="portal-card card-quiz" onclick="window.location.href='https://umi4555.github.io/Quizz/'">
+      <div class="portal-card card-quiz" onclick="window.location.href='https://umi4555.github.io/Quiz/'">
         <div class="card-content">
           <div class="card-icon">🧩</div>
           <h2 class="card-title">Quizz</h2>
           <p class="card-description">Testez vos connaissances de manière ludique</p>
-          <a href="https://umi4555.github.io/Quizz/" class="card-button">Commencer</a>
+          <a href="https://umi4555.github.io/Quiz/" class="card-button">Commencer</a>
         </div>
       </div>
 
-      <div class="portal-card card-coupon" onclick="window.location.href='https://umi4555.github.io/coupon-reponse/'">
+       <div class="portal-card card-coupon" onclick="window.location.href='https://umi4555.github.io/Jeux/'">
+        <div class="card-content">
+          <div class="card-icon">🎮</div>
+          <h2 class="card-title">Jeux</h2>
+          <p class="card-description">Découvrez nos jeux interactifs</p>
+          <a href="https://umi4555.github.io/Jeux/" class="card-button">Jouer</a>
+        </div>
+      </div>
+
+          <div class="portal-card card-learning" onclick="document.getElementById('learning-resources').style.display='flex'">
+        <div class="card-content">
+          <div class="card-icon">📚</div>
+          <h2 class="card-title">Ressources d'Apprentissage</h2>
+          <p class="card-description">Formations en ligne et certifications</p>
+          <a href="#learning-resources" class="card-button">Explorer</a>
+        </div>
+      </div>
+
+      <div class="portal-card card-jeux" onclick="window.location.href='coupon-reponse.html'">
         <div class="card-content">
           <div class="card-icon">📄</div>
           <h2 class="card-title">Coupon-Réponse</h2>
           <p class="card-description">Téléchargez les coupons-réponse en PDF pour vos demandes de stage.</p>
-          <a href="https://umi4555.github.io/coupon-reponse/" class="card-button">Consulter</a>
+          <a href="coupon-reponse.html" class="card-button">Consulter</a>
         </div>
       </div>
+
+      
+  
 
       <div class="portal-card card-documents" onclick="openDocsityModal()">
         <div class="card-content">
@@ -77,14 +98,7 @@
         </div>
       </div>
 
-      <div class="portal-card card-learning" onclick="document.getElementById('learning-resources').style.display='flex'">
-        <div class="card-content">
-          <div class="card-icon">📚</div>
-          <h2 class="card-title">Ressources d'Apprentissage</h2>
-          <p class="card-description">Formations en ligne et certifications</p>
-          <a href="#learning-resources" class="card-button">Explorer</a>
-        </div>
-      </div>
+  
     </div>
   </div>
 
