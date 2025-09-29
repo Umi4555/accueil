@@ -96,10 +96,10 @@
 
       <div class="portal-card card-learning" onclick="document.getElementById('learning-resources').style.display='flex'">
         <div class="card-content">
-          <div class="card-icon">📚</div>
-          <h2 class="card-title">Ressources d'Apprentissage</h2>
-          <p class="card-description">Formations en ligne et certifications</p>
-          <a href="#learning-resources" class="card-button">Explorer</a>
+          <div class="card-icon">📬</div>
+          <h2 class="card-title">Boîte à Questions Anonyme</h2>
+          <p class="card-description">Pose tes questions ou partage tes inquiétudes en toute confidentialité</p>
+           <a href="https://umi4555.github.io/espace-ecoute-/" class="card-button">Explorer</a>
         </div>
       </div>
 
@@ -118,127 +118,7 @@
     </div>
   </div>
 
-  <!-- Learning Resources Modal -->
-  <div id="learning-resources" style="
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.9);
-    display: none;
-    justify-content: center;
-    align-items: center;
-    z-index: 2000;
-    padding: 2rem;
-    overflow-y: auto;
-  ">
-    <div style="
-      background: var(--primary-dark);
-      border-radius: 20px;
-      max-width: 800px;
-      width: 100%;
-      padding: 2rem;
-      box-shadow: 0 20px 50px rgba(0,0,0,0.5);
-      text-align: center;
-    ">
-      <h2 style="
-        color: var(--dark-text);
-        margin-bottom: 2rem;
-        font-size: 2rem;
-      ">Ressources d'Apprentissage</h2>
-      
-      <div style="
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
-        @media (max-width: 600px) {
-          grid-template-columns: 1fr;
-        }
-      ">
-        <a href="https://www.mindluster.com/certificate/40/Python-programming-language-video" 
-           target="_blank" 
-           style="
-             background: var(--accent-secondary);
-             color: var(--dark-text);
-             padding: 1rem;
-             border-radius: 10px;
-             text-decoration: none;
-             display: block;
-             transition: transform 0.3s ease;
-           " 
-           onmouseover="this.style.transform='translateY(-5px)'" 
-           onmouseout="this.style.transform='translateY(0)'">
-          Certification Python
-        </a>
-        
-        <a href="https://www.mindluster.com/certificate/8784/Web-Design-video" 
-           target="_blank" 
-           style="
-             background: var(--accent-secondary);
-             color: var(--dark-text);
-             padding: 1rem;
-             border-radius: 10px;
-             text-decoration: none;
-             display: block;
-             transition: transform 0.3s ease;
-           " 
-           onmouseover="this.style.transform='translateY(-5px)'" 
-           onmouseout="this.style.transform='translateY(0)'">
-          Certification Web Design
-        </a>
-        
-        <a href="https://www.mindluster.com/certified/cat/1/Programming" 
-           target="_blank" 
-           style="
-             background: var(--accent-secondary);
-             color: var(--dark-text);
-             padding: 1rem;
-             border-radius: 10px;
-             text-decoration: none;
-             display: block;
-             transition: transform 0.3s ease;
-           " 
-           onmouseover="this.style.transform='translateY(-5px)'" 
-           onmouseout="this.style.transform='translateY(0)'">
-          Formations Programmation
-        </a>
-        
-        <a href="https://www.mindluster.com/certified/cat/26/Web-Design" 
-           target="_blank" 
-           style="
-             background: var(--accent-secondary);
-             color: var(--dark-text);
-             padding: 1rem;
-             border-radius: 10px;
-             text-decoration: none;
-             display: block;
-             transition: transform 0.3s ease;
-           " 
-           onmouseover="this.style.transform='translateY(-5px)'" 
-           onmouseout="this.style.transform='translateY(0)'">
-          Formations Web Design
-        </a>
-      </div>
-
-      <button onclick="document.getElementById('learning-resources').style.display='none'" 
-              style="
-                background: var(--accent-highlight);
-                color: var(--primary-dark);
-                border: none;
-                padding: 0.75rem 1.5rem;
-                border-radius: 25px;
-                margin-top: 1.5rem;
-                cursor: pointer;
-                transition: transform 0.3s ease;
-              "
-              onmouseover="this.style.transform='scale(1.05)'" 
-              onmouseout="this.style.transform='scale(1)'">
-        Fermer
-      </button>
-    </div>
-  </div>
-
+  
   <!-- Docsity Modal -->
   <div id="docsity-modal" style="
     position: fixed;
