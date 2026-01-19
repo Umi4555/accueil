@@ -313,4 +313,89 @@
       color: var(--accent-highlight);
       border-left-color: var(--accent-highlight);
       font-style: italic;
+
+        /* ============================= */
+/* COULEURS LYCEE CHATEAU BLANC */
+/* ============================= */
+
+:root {
+  --chateau-bleu: #6FC4C0;   /* Bleu-vert du logo */
+  --chateau-jaune: #E8C65B; /* Jaune du logo */
+  --chateau-noir: #000000;
+  --chateau-blanc: #FFFFFF;
+}
+
+/* Fond général */
+body {
+  background-color: var(--chateau-blanc);
+  color: var(--chateau-noir);
+}
+
+/* Header / Navbar */
+header,
+nav {
+  background-color: var(--chateau-bleu);
+  color: var(--chateau-noir);
+}
+
+/* Titres */
+h1, h2, h3, h4 {
+  color: var(--chateau-bleu);
+}
+
+/* Liens */
+a {
+  color: var(--chateau-bleu);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+a:hover {
+  color: var(--chateau-jaune);
+}
+
+/* Boutons */
+button,
+.btn,
+input[type="submit"] {
+  background-color: var(--chateau-jaune);
+  color: var(--chateau-noir);
+  border: 2px solid var(--chateau-bleu);
+  padding: 10px 16px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+button:hover,
+.btn:hover,
+input[type="submit"]:hover {
+  background-color: var(--chateau-bleu);
+  color: var(--chateau-blanc);
+}
+
+/* Sections */
+section,
+.main,
+.container {
+  background-color: var(--chateau-blanc);
+}
+
+/* Cartes / blocs */
+.card,
+.box {
+  border-left: 6px solid var(--chateau-bleu);
+  background-color: #F7FDFC;
+  padding: 15px;
+}
+
+/* Footer */
+footer {
+  background-color: var(--chateau-bleu);
+  color: var(--chateau-blanc);
+  padding: 20px;
+  text-align: center;
+}
+
     }
+
