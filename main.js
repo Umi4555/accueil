@@ -11,11 +11,6 @@ const chatbotQuestions = [
     'Y a-t-il des stages en entreprise ?',
     'Quel profil pour réussir ?'
   ]},
-  { category: 'Site et Fonctionnalités', questions: [
-    'Qui a créé ce site ?',
-    'Pourquoi ce site ?',
-    'Quelles fonctionnalités disponibles ?'
-  ]},
   { category: 'Vie Professionnelle', questions: [
     'Comment bien réussir en Bac Pro ?',
     'Quels débouchés après un Bac Pro ?',
@@ -30,9 +25,6 @@ const chatbotResponses = {
   'Peut-on poursuivre des études ?': 'Oui ! Il est possible de faire un BTS, un DUT, ou même une école d\'ingénieur après une prépa adaptée.',
   'Y a-t-il des stages en entreprise ?': 'Oui, plusieurs périodes de stages sont prévues pour acquérir de l\'expérience professionnelle.',
   'Quel profil pour réussir ?': 'Il faut être curieux, logique, aimer les nouvelles technologies et savoir résoudre des problèmes.',
-  'Qui a créé ce site ?': 'Ce site a été conçu par Umit et Abdoul Aziz.',
-  'Pourquoi ce site ?': 'Pour aider les élèves du Bac Pro CIEL en leur fournissant des informations, des ressources et des outils interactifs.',
-  'Quelles fonctionnalités disponibles ?': 'Un quiz par filière, un menu de la cantine, une vidéo de présentation du Bac Pro CIEL, un chatbot et un lien vers le site officiel du lycée.',
   'Comment bien réussir en Bac Pro ?': 'Être organisé, bien suivre les cours, faire des recherches personnelles et pratiquer sur des projets concrets.',
   'Quels débouchés après un Bac Pro ?': 'Soit entrer directement sur le marché du travail, soit poursuivre ses études pour se spécialiser.',
   'Pourquoi la cybersécurité est importante ?': 'Car les menaces informatiques sont de plus en plus nombreuses et les entreprises recherchent des experts en sécurité.'
@@ -156,3 +148,36 @@ window.displayQuestions = displayQuestions;
 window.showAnswer = showAnswer;
 window.openDocsityModal = openDocsityModal;
 window.closeDocsityModal = closeDocsityModal;
+
+/* Paris clock: displays current date + time in Europe/Paris and updates every second */
+export function startParisClock() {
+  const el = document.getElementById('paris-clock');
+  if (!el) return;
+
+  const timeFormatter = new Intl.DateTimeFormat('fr-FR', {
+    timeZone: 'Europe/Paris',
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit',
+    hour12: false
+  });
+
+  const dateFormatter = new Intl.DateTimeFormat('fr-FR', {
+    timeZone: 'Europe/Paris',
+    weekday: 'short',
+    day: '2-digit',
+    month: 'short',
+    year: 'numeric'
+  });
+
+  function update() {
+    const now = new Date();
+    el.textContent = `${dateFormatter.format(now)} • ${timeFormatter.format(now)}`;
+  }
+
+  update();
+  setInterval(update, 1000);
+}
+
+/* Start clock automatically when main.js loads */
+startParisClock();
