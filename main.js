@@ -149,7 +149,7 @@ window.showAnswer = showAnswer;
 window.openDocsityModal = openDocsityModal;
 window.closeDocsityModal = closeDocsityModal;
 
-/* Paris clock: displays current date + time in Europe/Paris and updates every second */
+/* Paris clock: displays current time in Europe/Paris and updates every second (date removed) */
 export function startParisClock() {
   const el = document.getElementById('paris-clock');
   if (!el) return;
@@ -162,17 +162,9 @@ export function startParisClock() {
     hour12: false
   });
 
-  const dateFormatter = new Intl.DateTimeFormat('fr-FR', {
-    timeZone: 'Europe/Paris',
-    weekday: 'short',
-    day: '2-digit',
-    month: 'short',
-    year: 'numeric'
-  });
-
   function update() {
     const now = new Date();
-    el.textContent = `${dateFormatter.format(now)} • ${timeFormatter.format(now)}`;
+    el.textContent = timeFormatter.format(now);
   }
 
   update();
