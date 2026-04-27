@@ -1,70 +1,77 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover" />
   <title>Espace Bien-être et Santé - Lycée Château Blanc</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style bien etre.css">
 </head>
 <body>
-  <a href="index.html" class="back-button">Retour</a>
+  <a href="index.html" class="back-button" aria-label="Retour">←</a>
 
-  <div class="well-being-container">
-    <header class="well-being-header">
-      <h1>Espace Bien-être et Santé</h1>
-    </header>
+  <main class="well-being-container" role="main">
+    <section class="page-section intro">
+      <header class="well-being-header" aria-hidden="true">
+        <h1>Espace Bien-être et Santé</h1>
+        <p class="lead">Un espace dédié à votre santé mentale, physique et au soutien étudiant.</p>
+      </header>
+    </section>
 
-    <div class="well-being-sections">
-      <div class="well-being-section">
-        <div class="section-icon">🧠</div>
+    <section class="page-section grid-section" aria-labelledby="sections-title">
+
+
+      <div class="well-being-sections" id="sections">
+      <article class="well-being-section" tabindex="0">
+        <div class="section-icon" aria-hidden="true">🧠</div>
         <h2 class="section-title">Bien-être Mental</h2>
         <p class="section-description">Stratégies pour gérer le stress et favoriser la santé mentale</p>
-        <a href="#" class="section-link" data-section="mental">En savoir plus</a>
-      </div>
+        <button class="section-link" data-section="mental" aria-controls="detailed-content">En savoir plus</button>
+      </article>
 
-      <div class="well-being-section">
-        <div class="section-icon">💪</div>
+      <article class="well-being-section" tabindex="0">
+        <div class="section-icon" aria-hidden="true">💪</div>
         <h2 class="section-title">Activité Physique</h2>
         <p class="section-description">Programmes d'exercices adaptés aux étudiants</p>
-        <a href="#" class="section-link" data-section="physique">En savoir plus</a>
-      </div>
+        <button class="section-link" data-section="physique" aria-controls="detailed-content">En savoir plus</button>
+      </article>
 
-      <div class="well-being-section">
-        <div class="section-icon">🥗</div>
+      <article class="well-being-section" tabindex="0">
+        <div class="section-icon" aria-hidden="true">🥗</div>
         <h2 class="section-title">Nutrition</h2>
         <p class="section-description">Conseils pour une alimentation équilibrée</p>
-        <a href="#" class="section-link" data-section="nutrition">En savoir plus</a>
-      </div>
+        <button class="section-link" data-section="nutrition" aria-controls="detailed-content">En savoir plus</button>
+      </article>
 
-      <div class="well-being-section">
-        <div class="section-icon">🧘‍♀️</div>
+      <article class="well-being-section" tabindex="0">
+        <div class="section-icon" aria-hidden="true">🧘‍♀️</div>
         <h2 class="section-title">Gestion du Stress</h2>
         <p class="section-description">Techniques pour réduire et gérer le stress</p>
-        <a href="#" class="section-link" data-section="stress">En savoir plus</a>
-      </div>
+        <button class="section-link" data-section="stress" aria-controls="detailed-content">En savoir plus</button>
+      </article>
 
-      <div class="well-being-section">
-        <div class="section-icon">📚</div>
+      <article class="well-being-section" tabindex="0">
+        <div class="section-icon" aria-hidden="true">📚</div>
         <h2 class="section-title">Ressources Universitaires</h2>
         <p class="section-description">Services de soutien et de bien-être</p>
-        <a href="#" class="section-link" data-section="ressources">En savoir plus</a>
-      </div>
+        <button class="section-link" data-section="ressources" aria-controls="detailed-content">En savoir plus</button>
+      </article>
 
-      <div class="well-being-section">
-        <div class="section-icon">📱</div>
+      <article class="well-being-section" tabindex="0">
+        <div class="section-icon" aria-hidden="true">📱</div>
         <h2 class="section-title">Outils Numériques</h2>
         <p class="section-description">Applications pour soutenir votre bien-être</p>
-        <a href="#" class="section-link" data-section="outils">En savoir plus</a>
-      </div>
+        <button class="section-link" data-section="outils" aria-controls="detailed-content">En savoir plus</button>
+      </article>
     </div>
-  </div>
+  </main>
 
-  <div id="detailed-content">
-    <div class="detailed-content-inner" id="content-container">
-      <button class="close-btn" onclick="closeDetailedContent()">Fermer</button>
+  <aside id="detailed-content" aria-hidden="true">
+    <div class="detailed-content-inner" id="content-container" role="dialog" aria-modal="true">
+      <button class="close-btn" id="closeBtn" aria-label="Fermer">Fermer</button>
+      <!-- Content injected by script -->
     </div>
-  </div>
+  </aside>
 
   <script>
     const contentSections = {
@@ -72,7 +79,6 @@
         title: "Bien-être Mental : Conseils pour Gérer le Stress",
         content: `
           <p>La gestion du stress est essentielle pour maintenir une bonne santé mentale. Chaque étudiant fait face à des défis uniques, et il est crucial de développer des stratégies personnalisées pour faire face aux pressions académiques et personnelles.</p>
-          
           <h3>Stratégies Recommandées :</h3>
           <ul>
             <li>Gestion du Temps : Planifiez vos activités et créez des routines structurées</li>
@@ -80,15 +86,13 @@
             <li>Activité Physique : Libérez des endorphines par l'exercice régulier</li>
             <li>Communication : N'hésitez pas à parler à des professionnels ou à vos proches</li>
           </ul>
-
-          <p>Rappelez-vous : Prendre soin de votre santé mentale n'est pas un signe de faiblesse, mais de force et de sagesse.</p>
+          <p>Prendre soin de votre santé mentale n'est pas un signe de faiblesse, mais de force et de sagesse.</p>
         `
       },
       physique: {
         title: "Activité Physique pour Étudiants",
         content: `
           <p>L'activité physique est un pilier essentiel du bien-être étudiant. Elle ne se limite pas à la performance, mais vise à améliorer votre santé globale et votre qualité de vie.</p>
-          
           <h3>Bienfaits de l'Exercice :</h3>
           <ul>
             <li>Réduction du stress et de l'anxiété</li>
@@ -96,7 +100,6 @@
             <li>Renforcement du système immunitaire</li>
             <li>Boost de l'énergie et de la confiance en soi</li>
           </ul>
-
           <p>Trouvez une activité qui vous plaît : marche, course, vélo, danse, sports collectifs. L'important est de bouger régulièrement.</p>
         `
       },
@@ -104,7 +107,6 @@
         title: "Nutrition : Carburant pour le Cerveau",
         content: `
           <p>Votre alimentation influence directement vos performances académiques et votre bien-être mental. Une nutrition équilibrée est votre meilleur allié.</p>
-          
           <h3>Principes Nutritionnels Clés :</h3>
           <ul>
             <li>Variété : Incluez tous les groupes alimentaires</li>
@@ -112,15 +114,13 @@
             <li>Repas réguliers : Évitez les sautes de repas</li>
             <li>Collations intelligentes : Fruits, noix, yaourts</li>
           </ul>
-
-          <p>Votre alimentation n'est pas un régime, c'est un mode de vie. Chaque repas est une opportunité de nourrir votre corps et votre esprit.</p>
+          <p>Votre alimentation n'est pas un régime, c'est un mode de vie.</p>
         `
       },
       stress: {
         title: "Gestion du Stress : Techniques de Résilience",
         content: `
           <p>Le stress est un compagnon inévitable de la vie étudiante. L'objectif n'est pas de l'éliminer, mais de développer des compétences pour le gérer efficacement.</p>
-          
           <h3>Techniques de Gestion du Stress :</h3>
           <ul>
             <li>Mindfulness et méditation</li>
@@ -128,7 +128,6 @@
             <li>Exercices de respiration profonde</li>
             <li>Sommeil et repos réguliers</li>
           </ul>
-
           <p>La résilience s'apprend. Chaque défi est une opportunité de croissance personnelle.</p>
         `
       },
@@ -136,7 +135,6 @@
         title: "Ressources et Soutien",
         content: `
           <p>Vous n'êtes pas seul. De nombreuses ressources sont à votre disposition pour vous accompagner dans votre parcours étudiant.</p>
-          
           <h3>Types de Soutien :</h3>
           <ul>
             <li>Conseillers psychologiques sur le campus</li>
@@ -144,15 +142,13 @@
             <li>Services d'accompagnement académique</li>
             <li>Lignes d'écoute et de conseil</li>
           </ul>
-
-          <p>Demander de l'aide est un signe de courage et de sagesse. N'hésitez jamais à tendre la main.</p>
+          <p>Demander de l'aide est un signe de courage et de sagesse.</p>
         `
       },
       outils: {
         title: "Outils Numériques de Bien-être",
         content: `
           <p>La technologie peut être un allié précieux dans votre quête de bien-être. De nombreuses applications sont conçues pour vous aider.</p>
-          
           <h3>Types d'Applications :</h3>
           <ul>
             <li>Méditation guidée</li>
@@ -160,37 +156,59 @@
             <li>Gestion du temps et productivité</li>
             <li>Journaux de gratitude et de réflexion</li>
           </ul>
-
           <p>Choisissez des outils qui vous correspondent et intégrez-les naturellement dans votre routine.</p>
         `
       }
     };
 
-    document.querySelectorAll('.section-link').forEach(link => {
-      link.addEventListener('click', function(e) {
-        e.preventDefault();
-        const section = this.getAttribute('data-section');
-        openDetailedContent(section);
-      });
-    });
+    const links = document.querySelectorAll('.section-link');
+    const detailed = document.getElementById('detailed-content');
+    const contentContainer = document.getElementById('content-container');
+    const closeBtn = document.getElementById('closeBtn');
 
-    function openDetailedContent(section) {
-      const detailedContent = document.getElementById('detailed-content');
-      const contentContainer = document.getElementById('content-container');
-      
-      contentContainer.innerHTML = `
-        <button class="close-btn" onclick="closeDetailedContent()">Fermer</button>
-        <h1>${contentSections[section].title}</h1>
-        ${contentSections[section].content}
-      `;
-      
-      detailedContent.style.display = 'block';
+    function openDetailedContent(sectionKey) {
+      const section = contentSections[sectionKey];
+      contentContainer.querySelectorAll('h1,h2,p,ul,ol').forEach(n => n.remove()); // clear previous content nodes except close button
+      const title = document.createElement('h1');
+      title.textContent = section.title;
+      contentContainer.appendChild(title);
+
+      const wrapper = document.createElement('div');
+      wrapper.className = 'detail-body';
+      wrapper.innerHTML = section.content;
+      contentContainer.appendChild(wrapper);
+
+      detailed.style.display = 'block';
+      detailed.setAttribute('aria-hidden', 'false');
+      // trap focus to close button for simplicity on mobile
+      closeBtn.focus();
     }
 
     function closeDetailedContent() {
-      const detailedContent = document.getElementById('detailed-content');
-      detailedContent.style.display = 'none';
+      detailed.style.display = 'none';
+      detailed.setAttribute('aria-hidden', 'true');
     }
+
+    links.forEach(btn => {
+      btn.addEventListener('click', () => openDetailedContent(btn.dataset.section));
+    });
+
+    closeBtn.addEventListener('click', closeDetailedContent);
+
+    // Close on overlay tap
+    detailed.addEventListener('click', (e) => {
+      if (e.target === detailed) closeDetailedContent();
+    });
+
+    // Ensure layout fits one screen: prevent scrolling
+    document.addEventListener('touchmove', function(e){
+      // allow scroll inside detailed content if overflow; otherwise prevent page scroll
+      if (detailed.style.display === 'block') {
+        const scroller = contentContainer.querySelector('.detail-body');
+        if (scroller && scroller.scrollHeight > scroller.clientHeight) return;
+        e.preventDefault();
+      }
+    }, { passive: false });
   </script>
 </body>
 </html>
